@@ -11,7 +11,9 @@ const VideoCard = ({ videosData}) => {
     <div className="card">
     {
      videosData.map(video=>(
-     <VideoContent video={video} />
+     <VideoContent
+     key={video?.title}
+     video={video} />
      ))
     }
     </div>

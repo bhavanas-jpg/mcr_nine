@@ -20,6 +20,7 @@ const Home = () => {
           <div className="card">
             {categoriesData.map(category =>(
               <div className="card__content"
+              key={category?.category}
               onClick={()=>navigate(`/videoListing/${category.category}`)}>
               <img src={category.thumbnail} alt=""
               width="100%" height="auto"

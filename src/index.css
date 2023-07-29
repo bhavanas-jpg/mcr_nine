@@ -45,7 +45,24 @@ body {
   margin-right: 1rem;
 }
 
+.btn {
+  display: inline-block;
+  padding: var(--btn-padding);
+  font-weight: 500;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: all 300ms ease;
+  font-size: 0.9rem;
+}
 
+.btn:hover {
+  opacity: 0.9;
+}
+
+.btn-primary {
+  background: var(--color-primary);
+  color: #fff;
+}
 
 
 
@@ -99,8 +116,46 @@ body {
   position: absolute;
   z-index: 1;
   right: 0;
- 
+  color: var(--color-primary);
   padding: 0.3rem;
   background: #ccc;
   border-bottom-left-radius:0.4rem;
+}
+.video__content{
+  border-bottom: 1px solid #000;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.6rem 0;
+}
+.video__list--icons{
+  display: flex;
+  gap: 0.5rem;
+}
+.video__list--icons li{
+  font-size: 22px;
+  cursor: pointer;
+}
+.playlist__input{
+  padding: 1rem;
+  border-radius: 20px;
+  margin: 1rem 0;
+}
+.playlist__content{
+  width: 200px;
+    height: 200px;
+    background-color: #ccc;
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+}
+.playlist{
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.note__sec{
+  display: flex;
+  justify-content: space-between;
+}
+.note__sec li{
+  cursor: pointer;
 }
