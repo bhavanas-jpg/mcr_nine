@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import { useVideoContext } from "../context/VideoContext";
 import { MdOutlineWatchLater } from "react-icons/md";
+import VideoCard from "../components/VideoCard";
 
 const Explore = () => {
   const { videosData} = useVideoContext();
@@ -22,25 +23,7 @@ const Explore = () => {
             placeholder="search by title"
             />
           </div>
-          <div className="card">
-          {
-           videosData.map(video=>(
-            <div className="card__content"> 
-              <span className="watchlater__icon">
-                <MdOutlineWatchLater />
-              </span>
-              <img src={video.thumbnail} alt=""
-              width="100%" height="auto"
-              />
-              <h5>{video.title}</h5>
-              <h5>{video.category }</h5>
-              <span
-              className="card__text"
-              >{video.views} Views | {video.creator}</span>
-            </div>
-           ))
-          }
-          </div>
+          <VideoCard  videosData ={ videosData}/>
         </section>
       </div>
     </main>

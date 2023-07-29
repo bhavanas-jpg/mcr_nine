@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar";
 import Playlist from "./pages/Playlist";
 import Explore from "./pages/Explore";
 import WatchLater from "./pages/WatchLater";
+import VideoListing from "./pages/VideoListing";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/explore" element={<Explore />}/>
         <Route path="/playlists" element={<Playlist />}/>  
         <Route path="/watchlater" element={<WatchLater />}/>
+        <Route path="/videoListing/:category" element={<VideoListing />}/>
       </Routes>
     </>
   );
