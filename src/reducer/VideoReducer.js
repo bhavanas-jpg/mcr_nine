@@ -19,13 +19,19 @@ const VideoReducer = ()=>{
                 playlists: [action.payload, ...state.playlists]
             }
         case "ADD_TO_NOTES":
+            const noteItem ={
+                id: uuid(),
+                noteData: action.payload
+            }
             return {
                 ...state,
-                notes: [action.payload, ...state.notes]
+                notes: [noteItem, ...state.notes]
             }
         case "DELETE_NOTE":
+            const updatedNote = state.notes.filter(note => note?.id !== action.payload)
             return{
-
+          ...state,
+          notes: updatedNote 
             }
         default:
             return null;
