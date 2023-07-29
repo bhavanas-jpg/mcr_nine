@@ -87,3 +87,20 @@ body {
   font-size: 1.1rem;
 }
 
+.card__text{
+  font-size: 14px;
+}
+.search__input{
+  width: 89%;
+    padding: 0.5rem;
+    margin: 1rem 0;
+}
+.watchlater__icon{
+  position: absolute;
+  z-index: 1;
+  right: 0;
+ 
+  padding: 0.3rem;
+  background: #ccc;
+  border-bottom-left-radius:0.4rem;
+}

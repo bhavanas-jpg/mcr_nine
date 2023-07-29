@@ -1,10 +1,12 @@
 .card{
     display: flex;
-    gap: 1rem;
+    gap: 2rem;
     flex-wrap: wrap;
+    border-radius: var(--card-border-radius)
 }
 .card__content{
-    width: 300px
+    width: 300px;
+    position: relative;
 }
 .card__content:hover{
     cursor: pointer;
