@@ -1,26 +1,21 @@
 import { createContext, useContext, useState } from "react";
+import {categories} from "../data/categories.js"
 
 
 export const VideoContext = createContext(null);
 
 export const VideoProvider =({children}) =>{
- const [categories, setCategories] = useState();
-
- const name="Bhavana"
-
-
-
-
+ const [categoriesData, setCategoriesData] = useState(categories);
 
 
 
 return(
     <VideoContext.Provider value={{
-        name
+        categoriesData
     }}>
         {children}
     </VideoContext.Provider>
 )
 }
 
-export const useVideos = ()=> useContext(VideoContext);
+export const useVideoContext = ()=> useContext(VideoContext);

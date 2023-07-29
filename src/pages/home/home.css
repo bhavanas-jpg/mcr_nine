@@ -1,0 +1,11 @@
+.card{
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+.card__content{
+    width: 300px
+}
+.card__content:hover{
+    cursor: pointer;
+}
